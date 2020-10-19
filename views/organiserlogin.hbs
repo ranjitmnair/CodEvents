@@ -18,11 +18,11 @@
         <div class="row justify-content-center">
             <div class="col-md-5">
                 <div class="card">
-                    <h2 class="card-title text-center">Log in </h2>
+                    <h2 class="card-title text-center">Log in as Organiser</h2>
                     <div class="card-body py-md-4">
-                        <form _lpchecked="1" action="/auth/login" method="POST">
+                        <form _lpchecked="1" action="/auth/organiserlogin" method="POST">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="userid" placeholder="User-ID" name="id">
+                                <input type="text" class="form-control" id="userid" placeholder="Organiser-ID" name="id">
                             </div>
 
                             <div class="form-group">
@@ -34,7 +34,7 @@
                                 <h4 class="alert alert-danger mt-4">{{message}}</h4>
                             {{/if}}
                             <div class="d-flex flex-row align-items-center justify-content-between">
-                                <button class="btn btn-primary">Log in</button>
+                                <button class="btn btn-primary">Log in as Organiser</button>
                             </div>
                         </form>
                     </div>

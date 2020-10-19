@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register|CodEvents</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/styles-register.css">
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card">
+                    <h2 class="card-title text-center">Register as Organiser </h2>
+                    <div class="card-body py-md-4">
+                        <form _lpchecked="1" action="/auth/organiserregister" method="POST">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="userid" placeholder="Organiser-ID" name="id">
+                            </div>
+
+                             <div class="form-group">
+                                <input type="name" class="form-control" id="name" placeholder="Name"
+                                    name="name">
+                            </div>                            
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" placeholder="Password"
+                                    name="password">
+                            </div>
+                           
+                            {{#if message}}
+                                <h4 class="alert alert-danger mt-4">{{message}}</h4>
+                            {{/if}}
+
+
+                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                <a href="../organiserlogin">Login as Organiser</a>
+                                <button class="btn btn-primary">Create Account as Organiser</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+</html>
