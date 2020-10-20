@@ -17,4 +17,8 @@ router.get('/organiserlogin',(req,res)=>{
     res.render('organiserlogin');
 })
 
+router.get('/organiserdashboard',(req,res)=>{
+    res.render('organiserdashboard');
+})
+
 module.exports=router;

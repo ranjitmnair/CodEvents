@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organisor Dashboard | CodEvents</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="\styles.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-light bg-dark">
+        <a class="navbar-brand text-warning">Organisor Dashboard | CodEvents</a>
+    </nav>
+
+    <div class="container my-5 jumbotron">
+        <strong>CREATE YOUR EVENT</strong>
+        <form method="POST" action="/organiser/createevent">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Organisor ID*</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="organiser_id"
+                    placeholder="Your organisor ID goes here">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">SELECT TYPE OF EVENT*</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="event_type">
+                    <option>Hackathons</option>
+                    <option>CodingContests</option>
+                    <option>Webinars</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Event Name*</label>
+                <input type="text" class="form-control" placeholder="Name of your event" name="name">
+            </div>
+
+            <div class="form-group">
+                <label>Event Venue *</label>
+                <input type="text" class="form-control" placeholder="Venue of Your event" name="venue">
+            </div>
+
+            <div class="form-group row">
+                <label for="example-date-input" class="col-2 col-form-label">Date*</label>
+                <div class="col-10">
+                    <input class="form-control" type="date" value="2020-08-19" id="example-date-input" name="date">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-time-input" class="col-2 col-form-label">Time*</label>
+                <div class="col-10">
+                    <input class="form-control" type="time" value="13:45:00" id="example-time-input" name="time">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Sponsor</label>
+                <input type="text" class="form-control" placeholder="Add Sponsor of your event(if any)" name="sponsors">
+            </div>
+
+            
+            {{!-- <div class="form-group">
+                <label>description</label>
+                <input type="text" class="form-control" placeholder="Add description in 500 chars" name="description">
+            </div> --}}
+            {{#if message}}
+            <h4 class="alert alert-danger mt-4">{{message}}</h4>
+            {{/if}}
+            <button class="btn btn-primary" type="submit">Create your event</button>
+        </form>
+
+    </div>
+
+
+
+
+
+    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
