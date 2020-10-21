@@ -4,5 +4,6 @@ const eventController=require('../controllers/createevent');
 
 router.post('/createevent',eventController.create);
 
+router.post('/getmyevents',eventController.getcreatedevents);
 
 module.exports=router;

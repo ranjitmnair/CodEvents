@@ -3,6 +3,7 @@ const app=express();
 const path=require('path');
 const {db}=require('./database');
 const session = require('express-session');
+
 // const cookieParser=require('cookie-parser');
 
 
@@ -20,6 +21,7 @@ const publicDirectory=path.join(__dirname,'./public');
 app.use(express.static(publicDirectory));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
+
 // app.use(cookieParser);
 
 
@@ -28,6 +30,7 @@ app.use(express.json());
 app.use('/',require('./routes/pages'));
 app.use('/auth',require('./routes/auth'));
 app.use('/organiser',require('./routes/organiser'));
+app.use('/events',require('./routes/events'))
 
 
 

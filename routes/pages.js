@@ -21,4 +21,15 @@ router.get('/organiserdashboard',(req,res)=>{
     res.render('organiserdashboard');
 })
 
+router.get('/userdashboard',(req,res)=>{
+    res.render('userdashboard');
+})
+
+router.get('/events/hackathons',(req,res)=>{
+    res.render('hackathons')
+})
+
+router.get('/events/codingcontests',(req,res)=>{
+    res.render('hackathons')
+})
 module.exports=router;

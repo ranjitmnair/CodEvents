@@ -52,7 +52,7 @@ exports.login = async (req, res) => {
             message: 'Enter valid org-id or password',
           });
         } 
-        res.status(200).send("<h1> Signed in as organiser </h1>");
+        res.status(200).redirect('../organiserdashboard');
       }
 
 
