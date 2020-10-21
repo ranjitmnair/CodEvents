@@ -9,5 +9,6 @@ router.get('/webinars/show',eventController.showallwebinars);
 router.post('/hackathonregister',eventController.registerforhackathon);
 router.post('/codingcontestregister',eventController.registerforcodingcontests);
 router.post('/webinarregister',eventController.registerforwebinars);
+router.post('/getallevents',eventController.getallevents);
 
 module.exports=router;

@@ -8,16 +8,10 @@ const session = require('express-session');
 
 
 
-
-
-app.get('/',(req,res)=>{
-    res.send('<h1>CodEvents</h1>');
-})
-
 app.set('view engine','hbs');
 
 
-const publicDirectory=path.join(__dirname,'./public');
+const publicDirectory=path.join(__dirname,'/public');
 app.use(express.static(publicDirectory));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());

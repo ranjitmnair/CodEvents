@@ -78,3 +78,14 @@ exports.registerforwebinars=(req,res)=>{
         )
     })
 }
+
+exports.getallevents=(req,res)=>{
+    const {user_id}=req.body;
+    db.query('SELECT * from `user-registered-events` where user_id=?',[user_id],(error,results)=>{
+        if(error)return(error);
+        console.log(results);
+        res.render('userdashboard',{
+            results:results            
+        });
+    })
+}
