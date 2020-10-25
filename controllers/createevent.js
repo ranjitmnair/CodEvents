@@ -31,7 +31,7 @@ exports.getcreatedevents=(req,res)=>{
     const organiser_id=req.body.organiser_id_1;
     db.query('SELECT * from `organiser-created-events` where organiser_id= ?',[organiser_id],(error,results)=>{
         if(error)console.log(error)
-        console.log(results)
+        //console.log(results)
         res.status(200).render('organiserdashboard',{
             results:results
         })
